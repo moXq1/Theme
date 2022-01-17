@@ -1,0 +1,30 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.jpeg</argument>
+                <argument name="logo_width" xsi:type="number">100</argument>
+                <argument name="logo_height" xsi:type="number">100</argument>
+                <argument name="logo_alt" xsi:type="string">Logo name</argument>
+            </arguments>
+        </referenceBlock>
+
+
+        <referenceBlock name="footer_links" display="false">
+            
+        </referenceBlock>
+        <referenceContainer name="footer">
+            <container name="footer_links" label="Footer"  htmlTag="ul"  htmlClass="footer links" before="-">
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer.newlinks" template="Magento_Theme::footer.phtml" />
+            </container> 
+        </referenceContainer>
+
+        <referenceContainer name="content" display="false">
+            
+        </referenceContainer>
+
+
+
+
+    </body>
+</page>
