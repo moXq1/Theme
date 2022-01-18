@@ -1,6 +1,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
   <head>
+
+        <css src="css/fontawesome/fontawesome.css"/>
+        <css src="css/fontawesome/regular.css"/>
+        <css src="css/fontawesome/solid.css"/>
+
   
-  <link rel="stylesheet" type="text/css" src="https://use.fontawesome.com/releases/v5.15.4/css/all.css" src_type="url" />
+  <!-- <link rel="stylesheet" type="text/css" src="https://use.fontawesome.com/releases/v5.15.4/css/all.css" src_type="url" /> -->
   </head>
 </page>
