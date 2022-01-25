@@ -14,14 +14,12 @@
             
         </referenceBlock>
         <referenceContainer name="footer">
-            <container name="footer_links" label="Footer"  htmlTag="ul"  htmlClass="footer links" before="-">
-            <block class="Magento\Framework\View\Element\Html\Links" name="footer.newlinks" template="Magento_Theme::footer.phtml" />
-            </container> 
+            <!-- <container name="footer_links" label="Footer"  htmlTag="ul"  htmlClass="footer links" before="-"> -->
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer.newlinks" template="Magento_Theme::footer.phtml" before="-" />
+            <!-- </container>   -->
         </referenceContainer>
 
-        <referenceContainer name="content" display="false">
-            
-        </referenceContainer>
+     
 
 
 

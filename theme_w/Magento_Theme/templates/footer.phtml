@@ -1,6 +1,31 @@
-
-  <li><a href="<?= $block->escapeUrl('#');?>">1</a></li>
+<div class="footer__links" id='accord' >
+<div data-role="collapsible" class='collap'>
+        <div data-role="trigger">
+       <h3 class="footer__title">Links</h3>
+        </div>
+    </div>
+  
+  <ul class="footer__list" data-role="content">
+      <li><a href="<?= $block->escapeUrl('#');?>">1</a></li>
   <li><a href="<?= $block->escapeUrl('#');?>">2</a></li>
   <li><a href="<?= $block->escapeUrl('#');?>">3</a></li>
   <li><a href="<?= $block->escapeUrl('#');?>">4</a></li>
   <li><a href="<?= $block->escapeUrl('#');?>">5</a></li>
+  </ul>
+</div>
+
+<script type="text/x-magento-init">
+    {
+
+        "*": {
+            "Magento_Ui/js/core/app":{
+                "components":{
+                    "accord":{
+                        "component":"Magento_Theme/js/accord"
+                    }
+                }
+            }
+       
+            }
+    }
+    </script>
