@@ -1,0 +1,70 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+
+
+
+       <referenceBlock name="store.settings">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Settings</argument>
+                    </arguments>
+                    <block class="Magento\Store\Block\Switcher" name="store.settings.language" template="Magento_Store::switch/languages.phtml">
+                        <arguments>
+                            <argument name="id_modifier" xsi:type="string">nav</argument>
+                            <argument name="view_model" xsi:type="object">Magento\Store\ViewModel\SwitcherUrlProvider</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Directory\Block\Currency" name="store.settings.currency" template="Magento_Directory::currency.phtml">
+                        <arguments>
+                            <argument name="id_modifier" xsi:type="string">nav</argument>
+                        </arguments>
+                    </block>
+                </referenceBlock>
+
+
+     <referenceBlock name="catalog.topnav">
+            <block name="custom.menu.links" template="Magento_Theme::html/topmenu_custom.phtml"/>
+        </referenceBlock>
+
+
+    <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.svg</argument>
+                <argument name="logo_width" xsi:type="number">40</argument>
+                <argument name="logo_height" xsi:type="number">40</argument>
+                <argument name="logo_alt" xsi:type="string">Logo name</argument>
+            </arguments>
+        </referenceBlock>
+<!-- 
+    <referenceContainer name="header.container">
+    <container name="project-header-wrap" htmlTag="div"  htmlClass="project-header-wrap">
+        <container name="project-header-left" htmlClass="project-header-left" htmlTag="div" ></container>
+        <container name="project-header-mid" htmlClass="project-header-mid" htmlTag="div" >
+       
+        </container>
+        <container name="project-header-right" htmlClass="project-header-right" htmlTag="div" ></container>
+        </container>
+
+        </referenceContainer> -->
+
+<referenceContainer name="header-wrapper">
+    <block name="header-account" template="Magento_Theme::header-account.phtml" after="minicart" />
+</referenceContainer>
+<move element="navigation.sections" destination="header-wrapper" />
+
+
+
+<!-- <move element="logo" destination="project-header-left" />
+<move element="navigation.sections" destination="project-header-mid" />
+<move element="top.search" destination="project-header-right" before="-" />
+<move element="minicart" destination="project-header-right" /> -->
+
+
+
+    <!-- <referenceContainer name="header-wrapper" display='false'>
+
+        </referenceContainer> -->
+
+
+    </body>
+</page>
