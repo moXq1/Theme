@@ -1,5 +1,5 @@
 
- <div class="greet welcome" data-bind="scope: 'customer'"><!-- ko if: customer().fullname  -->
+ <div data-bind="scope: 'customer'"><!-- ko if: customer().fullname  -->
 <div class='header-account'>
     <a id="account-link" href="<?= $block->escapeUrl('/customer/account/');?>">
         <img src='<?php echo $this->getViewFileUrl('images/acc.png'); ?>' alt="Demo">
