@@ -1,0 +1,36 @@
+
+ <div data-bind="scope: 'customer'"><!-- ko if: customer().fullname  -->
+<div class='header-account'>
+    <a id="account-link" href="<?= $block->escapeUrl('/customer/account/');?>">
+        <img src='<?php echo $this->getViewFileUrl('images/acc.png'); ?>' alt="Demo">
+    </a>
+
+</div>
+<!-- /ko --></div>
+
+
+
+<style>
+
+    .header-account{
+        float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    margin: 0 10px;
+    }
+
+    .header-account a{
+        height:32px;
+        width:32px;
+        position: relative;
+    }
+
+    .header-account img{
+        max-width: 100%;
+        object-fit:cover;
+        border-radius:50%;
+
+    }
+</style>
