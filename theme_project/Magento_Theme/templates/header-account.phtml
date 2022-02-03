@@ -1,36 +1,107 @@
+<div data-bind="scope: 'customer'">
+    <div class='header-account' data-dropdown>
+        <a id="account-link" data-dropdown-btn href="#">
+            <img data-dropdown-btn src='<?php echo $this->getViewFileUrl('images/acc.png'); ?>' alt="Demo">
+        </a>
+        <div class="header-account__menu">
+            <ul class="header-account__links">
+                <li><a href="<?= $block->escapeUrl('customer/account/')?>">My Account</a></li>
 
- <div data-bind="scope: 'customer'"><!-- ko if: customer().fullname  -->
-<div class='header-account'>
-    <a id="account-link" href="<?= $block->escapeUrl('/customer/account/');?>">
-        <img src='<?php echo $this->getViewFileUrl('images/acc.png'); ?>' alt="Demo">
-    </a>
+                <li data-bind="scope: 'wishlist'"><a href="<?= $block->escapeUrl('/wishlist') ?>">My Wish List ( <span data-bind="text: wishlist().counter">
+                        </span>)</a></li>
+                <!-- ko if: !(customer().firstname)  -->
+                <li><a href="<?= $block->escapeUrl('/customer/account/create/') ?>">Create an Account</a></li>
+                <li><a href="<?= $block->escapeUrl('/customer/account/login/') ?>">Sign In</a></li>
+                <!-- /ko -->
+                <!-- ko if: (customer().firstname)  -->
+                <li><a href="<?= $block->escapeUrl('/customer/account/logout/') ?>">Sign Out</a></li>
+                <!-- /ko -->
 
+
+            </ul>
+        </div>
+    </div>
 </div>
-<!-- /ko --></div>
+
+
+
 
 
 
 <style>
+    .header-account__menu {
+        position: absolute;
+        right: 0;
+        top: calc(100% - 0.25rem);
+        background-color: white;
+        padding: 1rem 2rem 2rem 2rem;
+        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, .24);
+        z-index: 20;
+        color: black;
+        opacity: 0;
+        transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+        transform: translateY(-100%);
+        pointer-events: none;
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
 
-    .header-account{
-        float: right;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    margin: 0 10px;
     }
 
-    .header-account a{
-        height:32px;
-        width:32px;
+    .header-account__menu::before {
+        content: '';
+        position: absolute;
+        border-bottom: 7px solid #fff;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        top: -7px;
+        right: 7px;
+
+
+
+    }
+
+    .header-account.active>#account-link+.header-account__menu {
+        opacity: 1;
+        transform: translateY(0%);
+        pointer-events: auto;
+    }
+
+
+    .header-account {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        margin: 0 10px;
         position: relative;
     }
 
-    .header-account img{
+    .header-account a {
+        height: 32px;
+        width: 32px;
+        position: relative;
+        color: #000;
+    }
+
+
+    .header-account__links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        gap: 1rem;
+
+    }
+
+    .header-account img {
         max-width: 100%;
-        object-fit:cover;
-        border-radius:50%;
+        object-fit: cover;
+        border-radius: 50%;
+        pointer-events: none;
 
     }
 </style>

@@ -39,10 +39,13 @@
         </referenceContainer> -->
 
         <referenceContainer name="header-wrapper">
-            <block name="header-account" template="Magento_Theme::header-account.phtml" after="minicart" />
+          
+            <container name="header-wrp" htmlTag="div" htmlClass="header-wrp" after="-">
+             <block name="header-account" template="Magento_Theme::header-account.phtml" after="minicart" />
+            </container>
         </referenceContainer>
         <move element="navigation.sections" destination="header-wrapper" />
-
+         <move element="minicart" destination="header-wrp" />
 
 
         <!-- <move element="logo" destination="project-header-left" />

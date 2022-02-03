@@ -1,7 +1,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
- 
+   
 }
 
 input,button{
@@ -12,7 +12,16 @@ input,button{
 margin: 0 auto;
 width: 100%;
 max-width: 1400px;
+display: flex;
+    align-items: center;
 
+}
+
+.header-wrp{
+    display: flex;
+    align-items: center;
+    order:5;
+    flex-direction: row-reverse;
 }
 
 .logo{
@@ -24,6 +33,7 @@ max-width: 1400px;
 .nav-sections {
    
     display: flex;
+    margin: 0;
 }
 .navigation{
     margin:0;
@@ -37,6 +47,12 @@ max-width: 1400px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    width: max-content;
+}
+
+.minicart-wrapper .block-minicart{
+    min-width: none;
 }
 
 #deals-custom a{
@@ -208,15 +224,32 @@ opacity: 0.6;
 @media only screen and (max-width: 1299px) {
 
     .header.content{
-        padding-top: 10px;
+         padding-top: 10px;
         padding-right: 20px;
         padding-left: 0;
+        display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 50px max-content 1fr max-content;
+    gap:1rem;
+    align-items: center;
         
     }
 
     .logo{
-        margin: 0 0 10px 60px;
+        margin: 0;
+        place-self: center;
+       
     }
+
+   .header-wrp{
+    
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column: -1;
+   }
+   .compare.wrapper{
+       display: none;
+   }
 
     .minicart-wrapper{
         margin-top: 0;
@@ -239,6 +272,11 @@ opacity: 0.6;
     .nav-sections-item-switch{
         color:white;
     }
+
+
+
+
+
     
 }
 
@@ -354,9 +392,8 @@ opacity: 0.6;
 @media only screen and (max-width: 775px) {
 
     .header.content{
-        padding-top: 10px;
-        padding-right: 0;
-        padding-left: 0;
+        padding: 1rem 0;
+        background-color: #0156FF;
         
     }
 
@@ -372,8 +409,31 @@ opacity: 0.6;
 
     .logo{
         transform: scale(0.5);
-        margin: 0 0 10px 40px;
+       
+        position: absolute;
+
+        left: -15px;
+    top: -85%;
+    padding: 2rem 3rem 3rem 3rem;
+
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: #0156FF;
     }
+
+    .logo img{
+        filter: brightness(0) invert(1);
+    }
+
+    .action.showcart::before,.nav-toggle:before{
+        filter: brightness(0) invert(1);
+    }
+
+    .minicart-wrapper .action.showcart .counter-number{
+        color: #000000;
+        background-color: white;
+    }
+
 
  
 }
@@ -425,5 +485,12 @@ opacity: 0.6;
     }
     .block.newsletter input{
         width: 100%;
+    }
+
+    .minicart-wrapper{
+        margin: 0;
+    }
+    .header.content{
+        gap: 0.5rem;
     }
 }
