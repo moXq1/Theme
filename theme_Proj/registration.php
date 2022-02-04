@@ -6,4 +6,4 @@
 
 use \Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/Newtheme/theme_project', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/Newtheme/theme_Proj', __DIR__);

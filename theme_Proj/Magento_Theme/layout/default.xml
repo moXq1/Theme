@@ -1,16 +1,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-<!-- 
-        <referenceContainer name="header.container">
-            <container name="before.header" htmlTag="div" htmlClass="before-header" before="header-wrapper">
-                <block name="before.header.working" template="Magento_Theme::working.phtml">
-                    <arguments>
-                        <argument name="view_model" xsi:type="object">Shop\CustomModule\ViewModel\WorkingViewModel</argument>
-                    </arguments>
-                </block>
-            </container>
-        </referenceContainer> -->
 
+   
 
 
         <referenceBlock name="catalog.topnav">
@@ -26,17 +17,7 @@
                 <argument name="logo_alt" xsi:type="string">Logo name</argument>
             </arguments>
         </referenceBlock>
-        <!-- 
-    <referenceContainer name="header.container">
-    <container name="project-header-wrap" htmlTag="div" htmlClass="project-header-wrap">
-        <container name="project-header-left" htmlClass="project-header-left" htmlTag="div"></container>
-        <container name="project-header-mid" htmlClass="project-header-mid" htmlTag="div">
-       
-        </container>
-        <container name="project-header-right" htmlClass="project-header-right" htmlTag="div"></container>
-        </container>
 
-        </referenceContainer> -->
 
         <referenceContainer name="header-wrapper">
           
@@ -52,6 +33,15 @@
 <move element="navigation.sections" destination="project-header-mid" />
 <move element="top.search" destination="project-header-right" before="-" />
 <move element="minicart" destination="project-header-right" /> -->
+
+
+ <!-- <referenceContainer name="page.wrapper">
+        <block class="Magento\Cms\Block\Block" name="benefits-block" before="footer">
+            <arguments>
+                <argument name="block_id" xsi:type="string">benefits-block</argument>
+            </arguments>
+        </block>
+    </referenceContainer> -->
 
 
 
