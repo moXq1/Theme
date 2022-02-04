@@ -35,13 +35,13 @@
 <move element="minicart" destination="project-header-right" /> -->
 
 
- <!-- <referenceContainer name="page.wrapper">
+ <referenceContainer name="page.wrapper">
         <block class="Magento\Cms\Block\Block" name="benefits-block" before="footer">
             <arguments>
                 <argument name="block_id" xsi:type="string">benefits-block</argument>
             </arguments>
         </block>
-    </referenceContainer> -->
+    </referenceContainer>
 
 
 
