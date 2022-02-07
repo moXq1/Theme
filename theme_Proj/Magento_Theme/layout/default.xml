@@ -34,6 +34,14 @@
 <move element="top.search" destination="project-header-right" before="-" />
 <move element="minicart" destination="project-header-right" /> -->
 
+<referenceContainer name="page.wrapper">
+<container name="review" htmlTag="section" htmlClass="review">
+
+    <block name="review.block" before="benefits-block" template="Magento_Theme::html/review.phtml" />
+   
+</container>
+ </referenceContainer>
+
 
  <referenceContainer name="page.wrapper">
         <block class="Magento\Cms\Block\Block" name="benefits-block" before="footer">
