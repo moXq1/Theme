@@ -2,7 +2,7 @@
     <body>
 
    
-
+ 
 
         <referenceBlock name="catalog.topnav">
             <block name="custom.menu.links" template="Magento_Theme::html/topmenu_custom.phtml"/>
@@ -34,13 +34,6 @@
 <move element="top.search" destination="project-header-right" before="-" />
 <move element="minicart" destination="project-header-right" /> -->
 
-<referenceContainer name="page.wrapper">
-<container name="review" htmlTag="section" htmlClass="review">
-
-    <block name="review.block" before="benefits-block" template="Magento_Theme::html/review.phtml" />
-   
-</container>
- </referenceContainer>
 
 
  <referenceContainer name="page.wrapper">
