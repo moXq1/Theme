@@ -1,0 +1,206 @@
+@button-primary__color            : white;
+@button-primary__hover__color     : white;
+@button-primary__background       : #0156FF;
+@button-primary__hover__background: #0156FF;
+@button-primary__border           : none;
+@button-primary__hover__border    : none;
+@button__border-radius            : 50px;
+@button-primary__padding          : 8px 61px;
+
+
+& when (@media-common =true) {
+
+    #contact-form {
+        width    : 100%;
+        min-width: 0;
+    }
+
+    #contact-form .fieldset {
+        display: grid;
+
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        padding      : 2rem;
+        border       : 1px solid #A2A6B0;
+        border-radius: 4px;
+    }
+
+    #contact-form input::placeholder,
+    #contact-form textarea::placeholder {
+        color: #A2A6B0;
+    }
+
+    .field.note {
+        grid-row-start   : 1;
+        grid-column-start: 1;
+        grid-column-end  : -1;
+    }
+
+    .contact-index-index .page-title {
+        font-weight: bold;
+    }
+
+    .contact-index-index.page-layout-2columns-right .columns {
+        display        : grid;
+        justify-content: space-between;
+        margin-bottom  : 2rem;
+
+    }
+
+    .contact-index-index.page-layout-2columns-right .columns:after {
+        display: none;
+    }
+
+    .contact-index-index.page-layout-2columns-right .sidebar-additional {
+
+        box-sizing  : border-box;
+        flex-grow   : 0;
+        background  : #F5F7FF;
+        max-height  : 400px;
+        justify-self: center;
+    }
+
+    .contact-index-index.page-layout-2columns-right .column.main {
+
+        width    : 100%;
+        flex-grow: 0;
+    }
+
+
+    .sidebar-data {
+        display       : flex;
+        flex-direction: column;
+        gap           : 2rem;
+    }
+
+    .sidebar-item {
+        display    : flex;
+        gap        : 1rem;
+        align-items: flex-start;
+    }
+
+    .sidebar-item img {
+        filter: brightness(0);
+    }
+
+    .sidebar-item-content {
+        display       : flex;
+        flex-direction: column;
+    }
+
+    .sidebar-item-title {
+        font-weight: bold;
+    }
+
+    .sidebar-item-text {
+        color: black;
+    }
+}
+
+//
+//  Mobile
+//_____________________________________
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    .contact-index-index.page-layout-2columns-right .columns {
+        gap: 2.5rem;
+    }
+
+    .sidebar-item-title {
+        font-size: 14px;
+    }
+
+    .sidebar-item-text {
+        font-size: 11px;
+    }
+
+    .contact-index-index.page-layout-2columns-right .columns {
+        grid-template-columns: 1fr;
+    }
+
+    #contact-form button {
+        width: auto;
+
+    }
+
+    #contact-form .actions-toolbar>.primary,
+    .actions-toolbar>.secondary {
+        text-align: start;
+    }
+
+    .contact-index-index.page-layout-2columns-right .sidebar-additional {
+        padding  : 3rem;
+        min-width: 0;
+    }
+
+    .contact-index-index.page-layout-2columns-right .column.main {
+
+        min-width: 0;
+    }
+}
+
+
+//
+//  Tablet
+//_____________________________________
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+
+    .contact-index-index.page-layout-2columns-right .columns {
+        grid-template-columns: 1fr max-content;
+
+
+    }
+
+    .contact-index-index.page-layout-2columns-right .sidebar-additional {
+        max-width    : 411px;
+        min-width    : 320px;
+        padding      : 3rem;
+        padding-right: 1rem;
+    }
+
+    .contact-index-index.page-layout-2columns-right .column.main {
+        max-width: 925px;
+        min-width: 344px;
+    }
+
+    .sidebar-item-title {
+        font-size: 18px;
+    }
+
+    .sidebar-item-text {
+        font-size: 13px;
+    }
+
+    .contact-index-index.page-layout-2columns-right .columns {
+        gap: 5rem;
+    }
+}
+
+
+//
+//  Desktop
+//_____________________________________
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__l) {
+
+
+    #contact-form .fieldset {
+        grid-template-columns: 1fr 1fr;
+        gap                  : 3rem;
+    }
+
+    #contact-form .field.comment {
+        grid-column-start: 1;
+        grid-column-end  : -1;
+    }
+
+
+    .sidebar-item-title {
+        font-size: 18px;
+    }
+
+    .sidebar-item-text {
+        font-size: 13px;
+    }
+
+}

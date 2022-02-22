@@ -9,6 +9,6 @@
             </block>
         </referenceContainer>
 
-        <move element="offers" destination="page.wrapper" before="review"/>
+        <move element="offers" destination="page.wrapper" after="main.content"/>
     </body>
 </page>
