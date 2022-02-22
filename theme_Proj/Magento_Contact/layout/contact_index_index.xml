@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-right" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Contact Us</title>
+    </head>
+    <body>
+   
+<referenceBlock name="wishlist_sidebar" remove="true" />
+<referenceBlock name="catalog.compare.sidebar" remove="true"/> 
+<!-- <referenceBlock name="upsell.product.addto.wishlist" remove="true" />
+<referenceBlock name="related.product.addto.wishlist" remove="true" />
+<referenceBlock name="related.product.addto.compare" remove="true" />
+<referenceBlock name="view.addto.wishlist" remove="true" />
+<referenceBlock name="view.addto.compare" remove="true" /> -->
+    
+
+
+          <referenceContainer name="sidebar.additional">
+               <block  name="contact-sidebar" template="Magento_Contact::sidebar.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Shop\CustomModule\ViewModel\WorkingViewModel</argument>
+                </arguments>
+            </block>
+     </referenceContainer>
+
+     <referenceContainer name="columns">
+         <block  name="contact-sidebar-note"  template="Magento_Contact::sidebar-note.phtml" />
+     </referenceContainer>
+    </body>
+</page>
