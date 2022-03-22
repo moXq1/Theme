@@ -1,0 +1,138 @@
+& when (@media-common =true) {
+
+    .customer-account-login {
+        .login-container {
+            display        : flex;
+            gap            : 3rem;
+            justify-content: center;
+
+        }
+
+        .block-title {
+            font-weight: bold;
+        }
+
+        .login-container .block-new-customer .actions-toolbar {
+            margin-top: 0;
+        }
+
+        .actions-toolbar {
+            display        : flex;
+            gap            : 1.6rem;
+            align-items    : center;
+            justify-content: start;
+        }
+
+        .primary {
+            margin: 0;
+        }
+
+        .login-container .fieldset:after,
+        .field.choice {
+            display: none;
+        }
+
+        .block-title {
+            font-weight: bold;
+        }
+
+        .block-content {
+            display       : flex;
+            flex-direction: column;
+            gap           : 3rem;
+        }
+
+        ul {
+            padding            : 0;
+            list-style-position: inside;
+            margin             : 0;
+        }
+
+        input {
+            border       : 1px solid #A2A6B0;
+            box-sizing   : border-box;
+            border-radius: 4px;
+            padding      : 2rem 0 2rem 2rem;
+        }
+
+    }
+
+    .customer-account-login .block-customer-login,
+    .customer-account-login .block-new-customer {
+        background: #F5F7FF;
+
+        margin: 0 !important;
+
+    }
+}
+
+
+
+//
+//  Mobile
+//_____________________________________
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    .customer-account-login {
+        .login-container {
+            flex-direction: column;
+
+        }
+
+        .secondary {
+            font-size: 11px;
+        }
+
+        .primary {
+            font-size: 13px;
+        }
+
+        .field.note,
+        .block-new-customer p,
+        .block-new-customer ul {
+            font-size: 12px;
+        }
+    }
+
+    .customer-account-login .block-customer-login,
+    .customer-account-login .block-new-customer {
+
+        padding: 3rem 1rem;
+
+
+    }
+}
+
+
+//
+//  Tablet
+//_____________________________________
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+
+    .customer-account-login {
+        .block-content {
+            gap: 3rem;
+        }
+
+        .secondary {
+            font-size: 14px;
+        }
+
+        .primary {
+            font-size: 14px;
+        }
+
+        .field.note,
+        .block-new-customer p,
+        .block-new-customer ul {
+            font-size: 14px;
+        }
+    }
+
+    .customer-account-login .block-customer-login,
+    .customer-account-login .block-new-customer {
+
+        padding: 3rem 5rem;
+
+
+    }
+}

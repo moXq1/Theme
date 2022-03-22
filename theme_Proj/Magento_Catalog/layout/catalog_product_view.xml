@@ -3,12 +3,21 @@
     <body>
         <!-- <referenceBlock name="product.info.review" remove="true" /> -->
         <referenceBlock name="reviews.tab" remove="true" />
-        <!-- <referenceContainer name="columns" remove="true"> </referenceContainer>
- <referenceContainer name="column.main" remove="true"> </referenceContainer>
-        -->
-        <referenceContainer name='content' remove='true' />
+
+<!-- MAGENTO REVIEW MODULE DISABLED -->
+
+          <!-- <referenceBlock name="reviews.tab" remove="true" />
+         <referenceBlock name="customer-account-navigation-product-reviews-link" remove="true" />
+         <referenceBlock name="customer_account_dashboard_info1" remove="true" />
+         <referenceBlock name="review_customer_list" remove="true" />
+         <referenceBlock name="customers_review" remove="true" />
+         <referenceBlock name="product.review.form" remove="true" />
+         <referenceBlock name="review_view" remove="true" />
+         <referenceBlock name="product.info.product_additional_data" remove="true" /> -->
+    
+        <!-- <referenceContainer name='content' remove='true' /> -->
         <referenceContainer name="main.content" label="Main Content Container" htmlTag="div" htmlClass="page-main" htmlId="page-product" />
-        <!-- <referenceContainer name="main" remove="true" />  -->
+       
 
        
         <move element="product.info.addtocart.additional" destination="product-controls__actions" after='-'/>

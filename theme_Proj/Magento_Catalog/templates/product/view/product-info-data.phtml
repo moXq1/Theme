@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
@@ -44,18 +45,18 @@
 
 
 <script>
+    document.querySelector('.product-container').addEventListener('click', function(e) {
 
-    document.addEventListener('click', function(e){
-     
         const isBtn = e.target.matches("[data-product-link]");
-        if(!isBtn){
+        const isSubmit = e.target.matches('[type=submit]')
+        if (!isBtn) {
             return
         }
         e.preventDefault();
         const descriptions = [...document.querySelectorAll('.product-descriptions')]
-        descriptions.forEach((el)=>el.classList.remove('active'));
+        descriptions.forEach((el) => el.classList.remove('active'));
         descriptions[e.target.dataset.productLink].classList.add('active')
         document.querySelector('.product-controls__tab.active').classList.remove('active')
-        e.target.classList.add('active')     
+        e.target.classList.add('active')
     })
 </script>
