@@ -11,10 +11,8 @@ define(["jquery"], function ($) {
       pageInit = true;
 
       $(
-        '<div class="quantity-nav"><button class="quantity-button quantity-up"></button><button class="quantity-button quantity-down"></button></div>'
+        '<div class="quantity-nav"><button type="button" class="quantity-button quantity-up"></button><button type="button" class="quantity-button quantity-down"></button></div>'
       ).insertAfter(".input-text.qty");
-
-      console.log(12);
 
       $(".box-tocart .control").each(function () {
         var spinner = $(this),

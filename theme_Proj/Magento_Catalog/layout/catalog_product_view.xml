@@ -20,8 +20,6 @@
        
 
        
-        <move element="product.info.addtocart.additional" destination="product-controls__actions" after='-'/>
-        <move element="product.container" destination="main" before="-"/>
 
         <referenceContainer name="page.wrapper">
             <container name="product.container" htmlTag="section" htmlClass="product-container" after="header-wrapper">
@@ -31,6 +29,7 @@
                 <container name="product.content" htmlTag="div" htmlClass="product-content">
                     <block name="product-controls-left" template="Magento_Catalog::product/view/product-controls-left.phtml" />
                     <container name="product-controls__actions" htmlTag="div" htmlClass="product-controls__actions">
+               
                         <block name="product-controls-right" template="Magento_Catalog::product/view/product-controls-right.phtml" />
                     </container>
 
@@ -67,6 +66,16 @@
 
         </referenceContainer>
 
+
+      
+
+  
+
+
+
+        <move element="product.info" destination="product-controls__actions" after='-'/>
+        <move element="product.container" destination="main" before="-"/>
+
         <move element="product.info.social" destination="product-media-btns" />
         <move element="product.info.mailto" destination="product.info.addto" after='-' />
 
@@ -74,7 +83,7 @@
 
         <move element="product.info.media" destination="product-gallery" before="-" />
         <move element="breadcrumbs" destination="product.wrap" before="-" />
-        <move element="product.info.options.wrapper" destination="product-descriptions" after='-'/>
+        <!-- <move element="product.info.options.wrapper" destination="product-descriptions" after='-'/> -->
 
 
 

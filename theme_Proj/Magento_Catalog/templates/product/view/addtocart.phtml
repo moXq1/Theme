@@ -20,8 +20,9 @@
                     </div>
                 </div>
             <?php endif; ?>
+
             <div class="actions">
-                <button type="submit" title="<?= $block->escapeHtmlAttr($buttonTitle) ?>" class="action primary tocart" id="product-addtocart-button">
+                <button type="submit" title="<?= $block->escapeHtmlAttr($buttonTitle) ?>" class="action primary tocart" id="product-addtocart-button" disabled>
                     <span><?= $block->escapeHtml($buttonTitle) ?></span>
                 </button>
                 <?= $block->getChildHtml('', true) ?>
@@ -39,6 +40,9 @@
                 "components":{
                     "qty":{
                         "component":"Magento_Catalog/js/qty"
+                    },
+                    "moveSwatches":{
+                        "component":"Magento_Catalog/js/moveSwatches"
                     }
                 }
             }
