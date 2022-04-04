@@ -3,7 +3,7 @@ define(["jquery"], function ($) {
 
   let pageInit = false;
 
-  return function () {
+  return function (config) {
     $(document).ready(function () {
       if (pageInit) {
         return;
@@ -14,7 +14,9 @@ define(["jquery"], function ($) {
         '<div class="quantity-nav"><button type="button" class="quantity-button quantity-up"></button><button type="button" class="quantity-button quantity-down"></button></div>'
       ).insertAfter(".input-text.qty");
 
-      $(".box-tocart .control").each(function () {
+      const parent = config.parent ? config.parent : ".box-tocart .control";
+
+      $(parent).each(function () {
         var spinner = $(this),
           input = spinner.find('input[type="number"]'),
           btnUp = spinner.find(".quantity-up"),

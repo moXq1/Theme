@@ -11,11 +11,11 @@
 $url = $block->getReviewsUrl() . '#reviews';
 $urlForm = $block->getReviewsUrl() . '#review-form';
 ?>
-<?php if ($block->isReviewEnabled() && $block->getReviewsCount()) : ?>
+<?php if ($block->isReviewEnabled() && $block->getReviewsCount()): ?>
     <?php $rating = $block->getRatingSummary(); ?>
 
     <div class="product-reviews-summary short<?= !$rating ? ' no-rating' : '' ?>">
-        <?php if ($rating) : ?>
+        <?php if ($rating): ?>
             <div class="rating-summary">
                 <span class="label"><span><?= $block->escapeHtml(__('Rating')) ?>:</span></span>
                 <div class="rating-result" id="rating-result_<?= /* @noEscape */ $block->getProduct()->getId() ?>" title="<?= $block->escapeHtmlAttr($rating) ?>%">
@@ -35,7 +35,7 @@ $urlForm = $block->getReviewsUrl() . '#review-form';
             </a>
         </div>
     </div>
-<?php elseif ($block->isReviewEnabled()) : ?>
+<?php elseif ($block->isReviewEnabled()): ?>
     <div class="product-reviews-summary short empty">
         <div class="reviews-actions">
             <a class="action add" href="<?= $block->escapeUrl($urlForm) ?>">
