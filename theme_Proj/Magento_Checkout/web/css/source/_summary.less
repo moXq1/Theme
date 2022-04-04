@@ -1,0 +1,56 @@
+& when (@media-common =true) {
+  .checkout-cart-index {
+    .cart-summary {
+      background: #f5f7ff;
+
+      &>.title {
+        font-weight: 600;
+      }
+
+      & .block .title strong[role="heading"] {
+        font-weight: 400;
+        font-size: 18px;
+      }
+
+      & .block .actions-toolbar>.primary .action.primary {
+        width: 100%;
+        color: #0156ff;
+        border-color: #0156ff;
+        background-color: transparent;
+      }
+    }
+
+    .field.note {
+      color: #666;
+    }
+
+    .select {
+      background-color: white;
+      border: 1px solid #a2a6b0;
+      box-sizing: border-box;
+      border-radius: 4px;
+      background-position: 96% 50%;
+      height: 50px;
+    }
+
+    .input-text {
+      height: 50px;
+      border-radius: 4px;
+    }
+
+    .fieldset.coupon .actions-toolbar {
+      width: 100%;
+    }
+
+    .data.table.totals {
+      & th {
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      & td {
+        font-weight: 600;
+      }
+    }
+  }
+}

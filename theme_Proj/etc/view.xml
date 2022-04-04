@@ -23,6 +23,11 @@
                 <height>250</height>
             </image>
 
+               <image id="cart_page_product_thumbnail" type="small_image">
+                <width>120</width>
+                <height>120</height>
+            </image>
+
             </images>
             </media> 
    
