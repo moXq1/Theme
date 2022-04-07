@@ -1,47 +1,69 @@
 <?php
 
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
 /** @var $block \Magento\Catalog\Block\Product\View */
 ?>
 
+<div class="product-features-container">
+  <div class="product-features__text">
+    <h2><?= __("Features") ?></h2>
+    <p>
+      <?= __("The MPG series brings out the best in gamers by allowing full expression
+      in color with advanced RGB lighting control and synchronization.") ?></p>
+  </div>
+  <div class="product-features__items">
+    <div class="product-features__feature">
+      <div class="product-features__img">
+        <img src='<?php echo $this->getViewFileUrl('images/intel.png'); ?>'
+          alt="intel logo">
+      </div>
 
-<div class="product-features__container">
-    <div class="product-features__text">
-        <h2 >Features</h2>
-        <p>The MPG series brings out the best in gamers by allowing full expression in color with advanced RGB lighting control and synchronization.</p>
+      <div class="product-features__description">
+        <?= __(
+                    "%1 %2",
+                    "<strong>Intel® Core™ i7</strong>",
+                    "processor with the upmost computing power to bring you an unparalleled gaming experience."
+                ) ?></div>
     </div>
-    <div class="product-features__items">
-        <div class="product-features__feature">
-        <div class="product-features__img">
-<img src='<?php echo $this->getViewFileUrl('images/intel.png'); ?>' alt="intel logo">
-        </div>    
-        
-            <div class="product-features__description"><strong>Intel® Core™ i7 </strong>processor with the upmost computing power to bring you an unparalleled gaming experience.</div>
-        </div>
-        <div class="product-features__feature">
-<div class="product-features__img">
-    <img src='<?php echo $this->getViewFileUrl('images/rtx.png'); ?>' alt="rtx nvidia logo">
-</div>
-        
-            <div class="product-features__description">The new <strong>GeForce® RTX SUPER™</strong> Series has more cores and higher clocks for superfast performance compared to previous-gen GPUs.</div>
-        </div>
-        <div class="product-features__feature">
-<div class="product-features__img">
-        <img src='<?php echo $this->getViewFileUrl('images/ssd.png'); ?>' alt="ssd logo">
-</div>
+    <div class="product-features__feature">
+      <div class="product-features__img">
+        <img src='<?php echo $this->getViewFileUrl('images/rtx.png'); ?>'
+          alt="rtx nvidia logo">
+      </div>
 
-            <div class="product-features__description">Unleash the full potential with the latest <strong>SSD technology</strong>, the NVM Express. 6 times faster than traditional SATA SSD.</div>
-        </div>
-        <div class="product-features__feature">
-            <div class="product-features__img">
- <img src='<?php echo $this->getViewFileUrl('images/ddr.png'); ?>' alt="ddr logo">
-            </div>
-       
-            <div class="product-features__description">Featuring the latest <strong>10th Gen Intel® Core™</strong> processors, memory can support up to DDR4 2933MHz to delivers an unprecedented gaming experience.</div>
-        </div>
+      <div class="product-features__description">
+        <?= __(
+                    "The new %1 %2",
+                    "<strong>GeForce® RTX SUPER™</strong>",
+                    "Series has more cores and higher clocks for superfast
+        performance compared to previous-gen GPUs."
+                ) ?></div>
     </div>
+    <div class="product-features__feature">
+      <div class="product-features__img">
+        <img src='<?php echo $this->getViewFileUrl('images/ssd.png'); ?>'
+          alt="ssd logo">
+      </div>
+
+      <div class="product-features__description">
+        <?= __(
+                    "Unleash the full potential withthe latest %1, %2",
+                    "<strong>SSD technology</strong>",
+                    "the NVM Express. 6 times faster than traditional SATA SSD."
+                ) ?></div>
+    </div>
+    <div class="product-features__feature">
+      <div class="product-features__img">
+        <img src='<?php echo $this->getViewFileUrl('images/ddr.png'); ?>'
+          alt="ddr logo">
+      </div>
+
+      <div class="product-features__description">
+        <?= __(
+                    "Featuring the latest %1 %2",
+                    "<strong>10th Gen Intel® Core™</strong> ",
+                    "processors, memory can support up to DDR4 2933MHz to delivers an unprecedented gaming experience."
+                ) ?>
+      </div>
+    </div>
+  </div>
 </div>

@@ -6,11 +6,8 @@ define(["jquery", "matchMedia", "accordion", "collapsible"], function (
 ) {
   "use strict";
   return function () {
-
-    console.log(222);
-    
     mediaCheck({
-      media: "(min-width:800px)",
+      media: "(min-width:767px)",
       entry: function () {
         if ($("#ff div[data-collapsible]").length !== 0) {
           $("#ff").accordion("activate");

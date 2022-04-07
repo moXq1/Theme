@@ -59,10 +59,4 @@ class ListProduct extends \Magento\Catalog\Block\Product\ListProduct
             $data
         );
     }
-
-
-    public function yourFunction()
-    {
-        //your function
-    }
 }

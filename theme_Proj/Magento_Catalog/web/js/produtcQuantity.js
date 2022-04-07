@@ -11,10 +11,15 @@ define(["jquery"], function ($) {
       pageInit = true;
 
       $(
-        '<div class="quantity-nav"><button type="button" class="quantity-button quantity-up"></button><button type="button" class="quantity-button quantity-down"></button></div>'
+        `<div class="quantity-nav">
+          <button type="button" class="quantity-button quantity-up"></button>
+          <button type="button" class="quantity-button quantity-down"></button>
+        </div>`
       ).insertAfter(".input-text.qty");
 
-      const parent = config.parent ? config.parent : ".box-tocart .control";
+      const parent = config.parent
+        ? config.parent
+        : ".box-tocart .control";
 
       $(parent).each(function () {
         var spinner = $(this),

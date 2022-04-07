@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
 /** @var $block \Magento\Catalog\Block\Product\View\Description*/
 ?>
 
@@ -49,17 +44,18 @@
 
         const isBtn = e.target.matches("[data-product-link]");
         const isSubmit = e.target.matches('[type=submit]')
+        const productWrapper = document.querySelector("#product-options-wrapper")
+        const productContact = document.querySelector(".product-contact")
         if (!isBtn) {
             return
         }
 
-        console.log(e.target.dataset.productLink)
         if (e.target.dataset.productLink !== "0") {
-            document.querySelector("#product-options-wrapper").style.visibility = 'hidden'
-            document.querySelector(".product-contact").classList.add('pd-t');
+            productWrapper.style.visibility = 'hidden'
+            productContact.classList.add('pd-t');
         } else {
-            document.querySelector("#product-options-wrapper").style.visibility = ''
-            document.querySelector(".product-contact").classList.remove('pd-t');
+            productWrapper.style.visibility = ''
+            productContact.classList.remove('pd-t');
         }
         e.preventDefault();
         const descriptions = [...document.querySelectorAll('.product-descriptions')]

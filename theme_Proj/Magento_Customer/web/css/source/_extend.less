@@ -1,25 +1,51 @@
 & when (@media-common =true) {
 
     .customer-account-login {
+
+        & .block-customer-login,
+        & .block-new-customer {
+            background: @color-light-white;
+            margin: 0 !important;
+        }
+
         .login-container {
-            display        : flex;
-            gap            : 3rem;
+            .lib-vendor-prefix-display(flex);
+            gap: 3rem;
             justify-content: center;
 
+            & .block-new-customer .actions-toolbar {
+                margin-top: 0;
+            }
+
+            & .fieldset:after {
+                display: none;
+            }
         }
 
-        .block-title {
-            font-weight: bold;
+        .block {
+            &-title {
+                font-weight: bold;
+            }
+
+            &-title {
+                font-weight: bold;
+            }
+
+            &-content {
+                .lib-vendor-prefix-display(flex);
+                .lib-vendor-prefix-flex-direction (column);
+                gap: 3rem;
+            }
         }
 
-        .login-container .block-new-customer .actions-toolbar {
-            margin-top: 0;
+        .field.choice {
+            display: none;
         }
 
         .actions-toolbar {
-            display        : flex;
-            gap            : 1.6rem;
-            align-items    : center;
+            .lib-vendor-prefix-display(flex);
+            gap: 1.6rem;
+            align-items: center;
             justify-content: start;
         }
 
@@ -27,85 +53,57 @@
             margin: 0;
         }
 
-        .login-container .fieldset:after,
-        .field.choice {
-            display: none;
-        }
-
-        .block-title {
-            font-weight: bold;
-        }
-
-        .block-content {
-            display       : flex;
-            flex-direction: column;
-            gap           : 3rem;
-        }
-
         ul {
-            padding            : 0;
+            padding: 0;
             list-style-position: inside;
-            margin             : 0;
+            margin: 0;
         }
 
         input {
-            border       : 1px solid #A2A6B0;
-            box-sizing   : border-box;
-            border-radius: 4px;
-            padding      : 2rem 0 2rem 2rem;
+            border: .1rem solid @color-light-grey;
+            box-sizing: border-box;
+            border-radius: .4rem;
+            padding: 2rem 0 2rem 2rem;
         }
-
-    }
-
-    .customer-account-login .block-customer-login,
-    .customer-account-login .block-new-customer {
-        background: #F5F7FF;
-
-        margin: 0 !important;
-
     }
 }
-
-
 
 //
 //  Mobile
 //_____________________________________
+
 .media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
     .customer-account-login {
-        .login-container {
-            flex-direction: column;
 
+        & .block-customer-login,
+        & .block-new-customer {
+            padding: 3rem 1rem;
+        }
+
+        .login-container {
+            .lib-vendor-prefix-flex-direction (column);
         }
 
         .secondary {
-            font-size: 11px;
+            font-size: 1.1rem;
         }
 
         .primary {
-            font-size: 13px;
+            font-size: 1.3rem;
         }
 
         .field.note,
         .block-new-customer p,
         .block-new-customer ul {
-            font-size: 12px;
+            font-size: 1.2rem;
         }
     }
-
-    .customer-account-login .block-customer-login,
-    .customer-account-login .block-new-customer {
-
-        padding: 3rem 1rem;
-
-
-    }
 }
-
 
 //
 //  Tablet
 //_____________________________________
+
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
 
     .customer-account-login {
@@ -114,25 +112,22 @@
         }
 
         .secondary {
-            font-size: 14px;
+            font-size: 1.4rem;
         }
 
         .primary {
-            font-size: 14px;
+            font-size: 1.4rem;
         }
 
         .field.note,
         .block-new-customer p,
         .block-new-customer ul {
-            font-size: 14px;
+            font-size: 1.4rem;
         }
     }
 
     .customer-account-login .block-customer-login,
     .customer-account-login .block-new-customer {
-
         padding: 3rem 5rem;
-
-
     }
 }

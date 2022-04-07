@@ -1,17 +1,12 @@
 <?php
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
 /** @var $block \Magento\Catalog\Block\Product\View\Description*/
 ?>
 
 <div>
-    <strong>Have a question?</strong>
-    <a href="<?= $block->escapeUrl('/contact-us') ?>">Contact us</a>
+  <strong><?= __('Have a question?') ?></strong>
+  <a href="<?= $block->escapeUrl('/contact-us') ?>"><?= __("Contact us") ?></a>
 </div>
 
 <div class='product-sku'>
-   SKU  <?= $block->getProduct()->getSku() ?> 
+  <?= __("SKU") ?> <?= $block->getProduct()->getSku() ?>
 </div>
