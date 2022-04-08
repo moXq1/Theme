@@ -1,0 +1,45 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceBlock name="catalog.topnav">
+            <block name="custom.menu.links" template="Magento_Theme::html/topmenu_custom.phtml"/>
+        </referenceBlock>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.svg</argument>
+                <argument name="logo_width" xsi:type="number">40</argument>
+                <argument name="logo_height" xsi:type="number">40</argument>
+                <argument name="logo_alt" xsi:type="string">Logo name</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceContainer name="header-wrapper">
+            <container name="header-wrp" htmlTag="div" htmlClass="header-wrp" after="-">
+                <block name="header-account" template="Magento_Theme::header-account.phtml" after="minicart" />
+            </container>
+        </referenceContainer>
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Cms\Block\Block" name="benefits-block" before="footer">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">benefits-block</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <container name="footer-head" htmlTag="div" htmlClass="footer-head">
+                <block name="footer-head-wrap" template="Magento_Theme::html/footer-head.phtml" before="-"/>
+            </container>
+            <container name="footer-links" htmlTag="div" htmlClass="footer-links" htmlId="ff">
+                <block name="footer-links-wrap" template="Magento_Theme::html/footer-links.phtml">
+                </block>
+            </container>
+        </referenceContainer>
+
+        <move element="navigation.sections" destination="header-wrapper" />
+        <move element="minicart" destination="header-wrp" />
+        <move element="form.subscribe" destination="footer-head" />
+
+        <referenceContainer name="footer_links" display='false'></referenceContainer>
+
+    </body>
+</page>

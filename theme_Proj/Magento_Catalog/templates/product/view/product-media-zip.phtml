@@ -1,0 +1,15 @@
+<?php
+/**
+ * @var $block \Magento\Catalog\Block\Product\View\Gallery
+ */
+?>
+
+<img src='<?php echo $this->getViewFileUrl('images/zip-logo.svg'); ?>'
+  alt="paypal logo">
+<div class="breaker"></div>
+<div class="zip-text">
+  <?= __(
+    "own it now, up to 6 months interest free %1",
+    "<a href='" . $block->escapeUrl('#') . "' class='zip-link'>learn more</a>"
+  ) ?>
+</div>

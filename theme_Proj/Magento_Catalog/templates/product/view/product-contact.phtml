@@ -1,0 +1,12 @@
+<?php
+/** @var $block \Magento\Catalog\Block\Product\View\Description*/
+?>
+
+<div>
+  <strong><?= __('Have a question?') ?></strong>
+  <a href="<?= $block->escapeUrl('/contact-us') ?>"><?= __("Contact us") ?></a>
+</div>
+
+<div class='product-sku'>
+  <?= __("SKU") ?> <?= $block->getProduct()->getSku() ?>
+</div>

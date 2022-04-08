@@ -1,0 +1,16 @@
+<?php
+/** @var $block \Magento\Catalog\Block\Product\View */
+?>
+
+<div class="product-controls__price">
+  <!--  $block->getProduct()
+          ->getPriceInfo()
+          ->getPrice(\Magento\Catalog\Pricing\Price\FinalPrice::PRICE_CODE)
+          ->getAmount() ?> -->
+  <span><?= __("On sale from") ?></span>
+  <strong>$3,299.00</strong>
+</div>
+<button class="product-controls__paypal">
+  <img src='<?php echo $this->getViewFileUrl('images/paypal2.svg'); ?>'
+    alt="paypal logo">
+</button>

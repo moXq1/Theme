@@ -1,0 +1,30 @@
+<div data-bind="scope: 'customer'">
+  <div class='header-account' data-dropdown>
+    <a id="account-link" data-dropdown-btn href="#">
+      <img data-dropdown-btn
+        src='<?php echo $this->getViewFileUrl('images/acc.png'); ?>' alt="Demo">
+    </a>
+    <div class="header-account__menu">
+      <ul class="header-account__links">
+        <li><a href="<?= $block->escapeUrl('customer/account/') ?>"><?= __("My
+            Account") ?></a></li>
+        <!-- ko if: (customer().firstname)  -->
+        <li data-bind="scope: 'wishlist'"><a
+            href="<?= $block->escapeUrl('/wishlist') ?>"><?= __("My Wish List") ?>
+            ( <span data-bind="text: wishlist().counter">
+            </span>)</a></li>
+        <!-- /ko -->
+        <!-- ko if: !(customer().firstname)  -->
+        <li><a href="<?= $block->escapeUrl('/customer/account/create/') ?>"><?= __("Create
+            an Account") ?></a></li>
+        <li><a href="<?= $block->escapeUrl('/customer/account/login/') ?>"><?= __("Sign
+            In") ?></a></li>
+        <!-- /ko -->
+        <!-- ko if: (customer().firstname)  -->
+        <li><a href="<?= $block->escapeUrl('/customer/account/logout/') ?>"><?= __("Sign
+            Out") ?></a></li>
+        <!-- /ko -->
+      </ul>
+    </div>
+  </div>
+</div>

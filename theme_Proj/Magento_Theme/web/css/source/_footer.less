@@ -1,0 +1,26 @@
+& when (@media-common =true) {
+  .footer-head {
+
+    &__wrap {
+      display: flex;
+      .lib-vendor-prefix-flex-direction(column);
+      gap: 0.5rem;
+    }
+
+    &__title {
+      text-transform: capitalize;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: clamp(1.8rem, 4vw - 1.25rem, 3.8rem);
+      color: @color-white;
+      margin: 0;
+    }
+
+    &__subtitle {
+      font-weight: 300;
+      font-size: clamp(1.2rem, 0.46vw + 1rem, 1.6rem);
+      color: @color-white;
+    }
+  }
+}

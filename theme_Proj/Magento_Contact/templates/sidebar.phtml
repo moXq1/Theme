@@ -1,0 +1,43 @@
+<?php
+/** @var $viewModel \Shop\CustomModule\ViewModel\WorkingViewModel */
+$viewModel = $block->getViewModel();
+?>
+
+<div class="sidebar-data">
+  <div class="sidebar-item">
+    <img src='<?php echo $this->getViewFileUrl('images/geo.svg'); ?>'
+      alt="geo logo">
+    <div class="sidebar-item-content">
+      <span class='sidebar-item-title'><?= __("Address") ?>:</span>
+      <div class='sidebar-item-text'>
+        <?= $block->escapeHtml($viewModel->fullAdress()); ?></div>
+    </div>
+  </div>
+  <div class="sidebar-item">
+    <img src='<?php echo $this->getViewFileUrl('images/bx_bx-phone.svg'); ?>'
+      alt="phone logo">
+    <div class="sidebar-item-content">
+      <span class='sidebar-item-title'><?= __("Phone") ?>: </span>
+      <a class='sidebar-item-text'
+        href="<?= $block->escapeHtml($viewModel->getPhoneNumber()); ?>"><?= $block->escapeHtml($viewModel->getPhoneNumber()); ?></a>
+    </div>
+  </div>
+  <div class='sidebar-item'>
+    <img src='<?php echo $this->getViewFileUrl('images/bx_bx-time.svg'); ?>'
+      alt="clock logo">
+    <div class="sidebar-item-content">
+      <span class='sidebar-item-title'><?= __("We are open") ?>:</span>
+      <div class='sidebar-item-text'>
+        <?= $block->escapeHtml($viewModel->getAllWorkingDays()); ?></div>
+    </div>
+  </div>
+  <div class='sidebar-item'>
+    <img src='<?php echo $this->getViewFileUrl('images/bx_bx-email.svg'); ?>'
+      alt="email logo">
+    <div class="sidebar-item-content">
+      <span class='sidebar-item-title'> <?= __("Email") ?> :</span>
+      <a class='sidebar-item-text'
+        href="mailto:<?= $block->escapeHtml($viewModel->getEmail()); ?>"><?= $block->escapeHtml($viewModel->getEmail()); ?></a>
+    </div>
+  </div>
+</div>

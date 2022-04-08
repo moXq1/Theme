@@ -1,0 +1,133 @@
+& when (@media-common =true) {
+
+    .customer-account-login {
+
+        & .block-customer-login,
+        & .block-new-customer {
+            background: @color-light-white;
+            margin: 0 !important;
+        }
+
+        .login-container {
+            .lib-vendor-prefix-display(flex);
+            gap: 3rem;
+            justify-content: center;
+
+            & .block-new-customer .actions-toolbar {
+                margin-top: 0;
+            }
+
+            & .fieldset:after {
+                display: none;
+            }
+        }
+
+        .block {
+            &-title {
+                font-weight: bold;
+            }
+
+            &-title {
+                font-weight: bold;
+            }
+
+            &-content {
+                .lib-vendor-prefix-display(flex);
+                .lib-vendor-prefix-flex-direction (column);
+                gap: 3rem;
+            }
+        }
+
+        .field.choice {
+            display: none;
+        }
+
+        .actions-toolbar {
+            .lib-vendor-prefix-display(flex);
+            gap: 1.6rem;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .primary {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style-position: inside;
+            margin: 0;
+        }
+
+        input {
+            border: .1rem solid @color-light-grey;
+            box-sizing: border-box;
+            border-radius: .4rem;
+            padding: 2rem 0 2rem 2rem;
+        }
+    }
+}
+
+//
+//  Mobile
+//_____________________________________
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    .customer-account-login {
+
+        & .block-customer-login,
+        & .block-new-customer {
+            padding: 3rem 1rem;
+        }
+
+        .login-container {
+            .lib-vendor-prefix-flex-direction (column);
+        }
+
+        .secondary {
+            font-size: 1.1rem;
+        }
+
+        .primary {
+            font-size: 1.3rem;
+        }
+
+        .field.note,
+        .block-new-customer p,
+        .block-new-customer ul {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+//
+//  Tablet
+//_____________________________________
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+
+    .customer-account-login {
+        .block-content {
+            gap: 3rem;
+        }
+
+        .secondary {
+            font-size: 1.4rem;
+        }
+
+        .primary {
+            font-size: 1.4rem;
+        }
+
+        .field.note,
+        .block-new-customer p,
+        .block-new-customer ul {
+            font-size: 1.4rem;
+        }
+    }
+
+    .customer-account-login .block-customer-login,
+    .customer-account-login .block-new-customer {
+        padding: 3rem 5rem;
+    }
+}

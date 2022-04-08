@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceContainer name="main.content" label="Main Content Container" htmlTag="div" htmlClass="page-main" htmlId="page-product" />
+        <referenceContainer name="page.wrapper">
+            <container name="product.container" htmlTag="section" htmlClass="product-container" after="header-wrapper">
+                <container name="product-controls" htmlTag="div" htmlClass="product-controls">
+                </container>
+                <container name="product.content" htmlTag="div" htmlClass="product-content">
+                    <block name="product-controls-left" template="Magento_Catalog::product/view/product-controls-left.phtml" />
+                    <container name="product-controls__actions" htmlTag="div" htmlClass="product-controls__actions">
+                        <block name="product-controls-right" template="Magento_Catalog::product/view/product-controls-right.phtml" />
+                    </container>
+                    <container name="product.wrap" htmlTag="div" htmlClass="product-wrap">
+                        <container name="product-info" htmlTag="div" htmlClass="product-info">
+                            <block class="Magento\Catalog\Block\Product\View" name="product-info-title" template="Magento_Catalog::product/view/product-info-title.phtml"/>
+                            <container name="product-descriptions" htmlTag="div" htmlClass="product-descriptions active">
+                                <block class="Magento\Catalog\Block\Product\View" name="product-info-block" template="Magento_Catalog::product/view/product-info.phtml" />
+                            </container>
+                            <block class="Magento\Catalog\Block\Product\View" name="product-info-data" template="Magento_Catalog::product/view/product-info-data.phtml" />
+                        </container>
+                        <container name="product-contact" htmlTag="div" htmlClass="product-contact">
+                            <block class="Magento\Catalog\Block\Product\View" template="Magento_Catalog::product/view/product-contact.phtml" />
+                        </container>
+                    </container>
+                    <container name="product-gallery" htmlTag="div" htmlClass="product-gallery" />
+                </container>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="product-gallery">
+            <container name="product-media-btns" htmlTag="div" htmlClass="product-media-btns">
+            </container>
+            <container name="product-media-zip" htmlTag="div" htmlClass="product-media-zip">
+                <block template="Magento_Catalog::product/view/product-media-zip.phtml" />
+            </container>
+        </referenceContainer>
+        <referenceContainer name="page.wrapper">
+            <container name="product-faq" htmlTag="section" htmlClass="product-faq" after="columns">
+                <block template="Magento_Catalog::product/view/product-faq.phtml" />
+            </container>
+            <container name="product-features" htmlTag="section" htmlClass="product-features" after='product-faq'>
+                <block template="Magento_Catalog::product/view/product-features.phtml" />
+            </container>
+        </referenceContainer>
+
+        <move element="product.info" destination="product-controls__actions" after='-'/>
+        <move element="product.container" destination="main" before="-"/>
+        <move element="product.info.social" destination="product-media-btns" />
+        <move element="product.info.mailto" destination="product.info.addto" after='-' />
+        <move element="product.info.media" destination="product-gallery" before="-" />
+        <move element="breadcrumbs" destination="product.wrap" before="-" />
+
+        <referenceBlock name="reviews.tab" remove="true" />
+    </body>
+</page>
